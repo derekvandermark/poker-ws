@@ -1,5 +1,9 @@
+import LobbyContainer from "../../components/lobbycontainer/lobbycontainer.component";
+
 export default function Create() {
     return (
-        <p>Create</p>
+        <LobbyContainer>
+            <p>Create</p>
+        </LobbyContainer>
     );
 }

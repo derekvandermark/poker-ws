@@ -1,5 +1,9 @@
+import LobbyContainer from "../../components/lobbycontainer/lobbycontainer.component";
+
 export default function Join() {
     return (
-        <p>Join</p>
+        <LobbyContainer>
+            <p>Join</p>
+        </LobbyContainer>
     );
 }
