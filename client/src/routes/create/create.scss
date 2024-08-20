@@ -1,0 +1,72 @@
+@use '../../styles/colors.scss';
+@use '../../styles/mixins.scss' as *;
+
+@font-face {
+    font-family: 'berkshire_swashregular';
+    src: url('../../assets/fonts/berkshireswash-regular-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/berkshireswash-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 85%;
+    height: 100%;
+    margin-block: 3em;
+    padding-block: 1em;
+
+    border-radius: 3em;
+    border-style: solid;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    @include breakpoint(desktop) {
+        margin-block: 5em;
+    }
+}
+
+.outer-container:nth-child(3) {
+    z-index: 2;
+}
+.outer-container:nth-child(5) {
+    z-index: 1;
+}
+
+h1 {
+    font-family: "berkshire_swashregular", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: colors.$red-400;
+    text-shadow: 
+    -0.75px -0.75px 0px white,
+    1.5px 1.5px 0px black,
+    -0.75px -0.75px 5px white,
+    1.5px 1.5px 5px white;
+
+    @include breakpoint(desktop) {
+        font-size: 5em;
+    }
+}
+
+h2 {
+    align-self: stretch;
+
+    margin-inline: 2rem;
+    margin-top: 1em;
+
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 
+    //  -0.75px -0.75px 0px white,
+    1.5px 1.5px 0px black,
+    // -0.75px -0.75px 5px white,
+     1.5px 1.5px 5px white;
+
+    @include breakpoint(desktop) {
+        font-size: 4em;
+    }
+}

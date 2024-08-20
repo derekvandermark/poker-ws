@@ -6,11 +6,18 @@ import { useState } from 'react';
 interface Props {
     itemList: Array<string>,
     selectedItem: string,
-    setSelectedItem: Function
+    setSelectedItem: Function,
+    listVisible: boolean,
+    setListVisible: Function
 }
 
-export default function DropList({ itemList, selectedItem, setSelectedItem } : Props) {
-    const [listVisible, setListVisible] = useState(false);
+export default function DropList({ 
+    itemList, 
+    selectedItem, 
+    setSelectedItem, 
+    listVisible, 
+    setListVisible 
+} : Props) {
 
     return (
         <div className='outer-container'  onClick={() => setListVisible(!listVisible)} >
