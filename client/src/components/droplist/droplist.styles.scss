@@ -1,0 +1,64 @@
+@use '../../styles/colors.scss';
+
+p {
+    padding-left: 1em;
+    line-height: 1.5;
+
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.down-arrow {
+    margin-inline: 0.3em;
+
+    color: colors.$red-500;
+    background-image: colors.$fade-white;
+    font-size: 2.5em;
+    border-radius: 0.4em; /* match the outer container */
+}
+
+.outer-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+
+    margin-inline: 2em;
+}
+
+.selected-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    z-index: 2;
+
+    background-image: colors.$fade-white;
+    border-radius: 0.4em;
+    border-style: solid;
+    border: 1px solid colors.$red-500;
+}
+
+.list-container {
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+    padding-top: 2.5em; // same as font size of the caret icon. so the height of the selected container
+
+    border: 1px solid colors.$red-500;
+    border-radius: 0.4em;
+    
+
+    background-color: white;
+}
+
+.list-item {
+    margin-block: 0.2em;
+}
+
+.list-item:active {
+    background-color: rgb(182, 182, 182);
+}
