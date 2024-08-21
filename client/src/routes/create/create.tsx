@@ -57,6 +57,18 @@ export default function Create() {
                     listVisible={timesListVisible}
                     setListVisible={setTimesListVisible}
                 />
+                <h2>Buy In</h2>
+                <div className="buy-in-container" >
+                    <p>$</p>
+                    <input className="buy-in-input" placeholder="10"></input>
+                </div>
+                <div className="rebuys-container" >
+                    <h2>Allow Rebuys</h2>
+                    <input type="checkbox" checked={true}></input>
+                </div>
+                <div className="start-container" >
+                    <a className="confirm-start" >Start</a>
+                </div>
             </div>
         </LobbyContainer>
     );

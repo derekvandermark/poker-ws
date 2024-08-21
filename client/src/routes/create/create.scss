@@ -10,6 +10,7 @@
 }
 
 .settings-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,4 +70,91 @@ h2 {
     @include breakpoint(desktop) {
         font-size: 4em;
     }
+}
+
+.buy-in-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+
+    height: 2.5em;
+    margin-inline: 2em;
+
+    background-image: colors.$fade-white;
+    border-radius: 0.4em;
+    border: 1px solid colors.$red-500;
+}
+
+.buy-in-input {
+    all: unset; // disables keyboard focus unfortunately
+
+    height: 100%;
+    padding-left: 0.2em;
+
+    background-image: colors.$fade-white;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: black;
+}
+
+.rebuys-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+
+    margin-top: 2em;
+    margin-inline: 2em;
+}
+
+h2:first-child { // For 'Allow Rebuys' h2. Won't affect any other elements. Requires this due to being in an extra container.
+    margin-top: 0em;
+    margin: 0em;
+}
+
+input[type='checkbox'] {
+    accent-color: colors.$red-500;
+    transform: scale(1.7);
+    margin-left: 7em;
+}
+
+.start-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    padding-inline: 2em;
+}
+
+a.confirm-start {
+    align-self: stretch;
+    padding-block: 0.5em;
+    padding-inline: 2em;
+
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: colors.$red-500;
+    
+    background-image: colors.$fade-white;
+    box-shadow: 0px 0px 16px 1px colors.$red-500;
+
+    border-width: 3px;
+    border-color: colors.$red-500;
+    border-radius: 0.5em;
+    border-style: solid;
+
+    transition: all 0.8s;
+}
+a:hover {
+    transform: scale(1.1);
+
+    color: white;
+    border-color: white;
+    background-image: colors.$fade-red;
 }
