@@ -122,11 +122,12 @@ input[type='checkbox'] {
 
 .start-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    height: 100%;
+    // height: 100%;
     width: 100%;
     padding-inline: 2em;
 }

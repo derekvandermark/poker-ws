@@ -27,6 +27,7 @@ export default function Create() {
     const [selectedTime, setSelectedTime] = useState(Object.keys(times)[0]);
     const [blindsListVisible, setBlindsListVisible] = useState(false);
     const [timesListVisible, setTimesListVisible] = useState(false);
+    const [allowRebuys, setAllowRebuys] = useState(true);
 
     function closeList() {
         if (blindsListVisible) {
@@ -64,7 +65,7 @@ export default function Create() {
                 </div>
                 <div className="rebuys-container" >
                     <h2>Allow Rebuys</h2>
-                    <input type="checkbox" checked={true}></input>
+                    <input type="checkbox" checked={allowRebuys} onClick={() => setAllowRebuys(!allowRebuys)}></input>
                 </div>
                 <div className="start-container" >
                     <a className="confirm-start" >Start</a>
